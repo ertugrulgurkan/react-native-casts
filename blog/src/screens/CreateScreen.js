@@ -6,6 +6,7 @@ const CreateScreen = ({ navigation }) => {
   const { state } = useContext(Context);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const { addBlogPost } = useContext(Context);
 
   return (
     <View>
@@ -21,7 +22,14 @@ const CreateScreen = ({ navigation }) => {
         value={content}
         onChangeText={(text) => setContent(text)}
       />
-      <Button title="Add Blog Post" />
+      <Button
+        title="Add Blog Post"
+        onPress={() =>
+          addBlogPost(title, content, () => {
+            navigation.navigate("Index");
+          })
+        }
+      />
     </View>
   );
 };
