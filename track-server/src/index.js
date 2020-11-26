@@ -12,7 +12,7 @@ app.use(authRoutes);
 
 const mongoUri =
   "mongodb+srv://admin:admin@cluster0.sjprc.mongodb.net/test?retryWrites=true&w=majority";
-
+ 
 mongoose.connect(mongoUri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
