@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(authRoutes);
 
 const mongoUri =
-  "mongodb+srv://admin:admin@cluster0.sjprc.mongodb.net/<dbname>?retryWrites=true&w=majority";
+  "mongodb+srv://admin:admin@cluster0.sjprc.mongodb.net/test?retryWrites=true&w=majority";
 
 mongoose.connect(mongoUri, {
   useNewUrlParser: true,
