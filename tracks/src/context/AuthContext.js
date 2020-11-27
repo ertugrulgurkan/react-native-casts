@@ -1,4 +1,6 @@
 import createDataContext from "./createDataContext";
+import trackerApi from "../api/tracker";
+
 
 const authReducer = (state, action) => {
   switch (action.type) {
@@ -8,7 +10,9 @@ const authReducer = (state, action) => {
 };
 
 const signup = (dispatch) => {
-  return ({ email, password }) => {};
+  return ({ email, password }) => {
+    
+  };
 };
 
 const signin = (dispatch) => {
