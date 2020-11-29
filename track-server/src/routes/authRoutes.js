@@ -14,6 +14,7 @@ router.post("/signup", async (req, res) => {
     console.log(req.body);
     res.send({ token });
   } catch (error) {
+    console.log("Error: ", error);
     res.status(422).send(error.message);
   }
 });
@@ -35,6 +36,7 @@ router.post("/signin", async (req, res) => {
     const token = jwt.sign({ userId: user._id }, "MY_SECRET_KEY");
     res.send({ token });
   } catch (err) {
+    console.log("Error: ", err);
     return res.status(422).send({ error: "Invalid password or email" });
   }
 
